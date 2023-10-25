@@ -1,0 +1,26 @@
+#include <stdio.h>
+int i;
+int j;
+int main()
+{
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=11;j++)
+        {
+            if(i==0|i==2)
+                printf("+");
+            if(i==1)
+            {
+                if(j==0|j==11)
+                    printf("+");
+                else
+                    printf(" ");
+            }
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
