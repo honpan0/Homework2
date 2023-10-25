@@ -1,0 +1,128 @@
+#include <stdio.h>
+char a='*';
+char b=' ';
+int c;
+int d;
+int main()
+
+{
+    printf("(A)\n");
+    for(c=0;c<=9;c++)
+    {
+        
+            if(c|1)
+            printf("%c",a);
+             if(c>=1)
+             printf("%c",a);
+              if(c>=2)
+              printf("%c",a);
+              if(c>=3)
+              printf("%c",a);
+               if(c>=4)
+               printf("%c",a);
+              if(c>=5)
+              printf("%c",a);
+              if(c>=6)
+              printf("%c",a);
+              if(c>=7)
+              printf("%c",a);
+              if(c>=8)
+               printf("%c",a);
+               if(c>=9)
+               printf("%c",a);
+              
+        printf("\n");
+    }
+    printf("\n");
+    printf("(B)\n");
+    for(c=9;c>=0;c--)
+        {
+        
+            if(c|1)
+            printf("%c",a);
+             if(c>=1)
+             printf("%c",a);
+              if(c>=2)
+              printf("%c",a);
+              if(c>=3)
+              printf("%c",a);
+               if(c>=4)
+               printf("%c",a);
+              if(c>=5)
+              printf("%c",a);
+              if(c>=6)
+              printf("%c",a);
+              if(c>=7)
+              printf("%c",a);
+              if(c>=8)
+               printf("%c",a);
+              if(c>=9)
+               printf("%c",a);
+        printf("\n");
+    }
+    printf("\n");
+    c=9;
+    printf("(C)\n");
+    while(c>=0)
+    {
+ for(d=9;d>=0;d--)
+        {
+        if(c==0&&d==0)
+            printf("*");
+        else if(c==1&&d==0||c==1&&d==1)
+            printf("*");
+        else  if(c==2&&d==0||c==2&&d==1||c==2&&d==2)
+            printf("*");
+        else if(c==3&&d==0||c==3&&d==1||c==3&&d==2||c==3&&d==3)
+            printf("*");
+        else  if(c==4&&d==0||c==4&&d==1||c==4&&d==2||c==4&&d==3||c==4&&d==4)
+            printf("*");
+        else if(c==5&&d==0||c==5&&d==1||c==5&&d==2||c==5&&d==3||c==5&&d==4||c==5&&d==5)
+            printf("*");
+        else  if(c==6&&d==0||c==6&&d==1||c==6&&d==2||c==6&&d==3||c==6&&d==4||c==6&&d==5||c==6&&d==6)
+            printf("*");
+        else  if(c==7&&d==0||c==7&&d==1||c==7&&d==2||c==7&&d==3||c==7&&d==4||c==7&&d==5||c==7&&d==6||c==7&&d==7)
+            printf("*");
+        else if(c==8&&d==0||c==8&&d==1||c==8&&d==2||c==8&&d==3||c==8&&d==4||c==8&&d==5||c==8&&d==6||c==8&&d==7||c==8&&d==8)
+            printf("*");
+        else if(c==9)
+           printf("*");
+        else
+            printf(" ");
+        }
+    c--;
+    printf("\n");
+    }
+    c=0;
+    printf("(D)\n");
+    while(c<=9)
+    {
+    for(d=9;d>=0;d--)
+        {
+        if(c==0&&d==0)
+            printf("*");
+        else if(c==1&&d==0||c==1&&d==1)
+            printf("*");
+        else  if(c==2&&d==0||c==2&&d==1||c==2&&d==2)
+            printf("*");
+        else if(c==3&&d==0||c==3&&d==1||c==3&&d==2||c==3&&d==3)
+            printf("*");
+        else  if(c==4&&d==0||c==4&&d==1||c==4&&d==2||c==4&&d==3||c==4&&d==4)
+            printf("*");
+        else if(c==5&&d==0||c==5&&d==1||c==5&&d==2||c==5&&d==3||c==5&&d==4||c==5&&d==5)
+            printf("*");
+        else  if(c==6&&d==0||c==6&&d==1||c==6&&d==2||c==6&&d==3||c==6&&d==4||c==6&&d==5||c==6&&d==6)
+            printf("*");
+        else  if(c==7&&d==0||c==7&&d==1||c==7&&d==2||c==7&&d==3||c==7&&d==4||c==7&&d==5||c==7&&d==6||c==7&&d==7)
+            printf("*");
+        else if(c==8&&d==0||c==8&&d==1||c==8&&d==2||c==8&&d==3||c==8&&d==4||c==8&&d==5||c==8&&d==6||c==8&&d==7||c==8&&d==8)
+            printf("*");
+        else if(c==9)
+            printf("*");
+        else
+            printf(" ");
+        }
+    c++;
+    printf("\n");
+    }
+}
