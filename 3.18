@@ -10,7 +10,7 @@ int main()
     if(a==-1)
         break;
     b=200+a*0.09;
-    printf("Salary is：$ %.2f\n",b);
+    printf("Salary is：$ %.2f\n\n",b);
     
     }
 }
