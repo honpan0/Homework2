@@ -1,0 +1,72 @@
+include <stdio.h>
+
+int main(void)
+{
+    // 宣告變數
+    int n = 9; // 菱形的高度
+    int i, j; // 迴圈控制變數
+
+    // 使用for迴圈來列印上半部的菱形
+    for (i = 0; i < n / 2 + 1; i++)
+    {
+        // 列印左邊的空格
+        for (j = 0; j < n / 2 - i; j++)
+        {
+            printf(" ");
+        }
+
+        // 列印左邊的星號
+        for (j = 0; j < i + 1; j++)
+        {
+            printf("*");
+        }
+
+        // 列印右邊的星號
+        for (j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+
+        // 列印右邊的空格
+        for (j = 0; j < n / 2 - i; j++)
+        {
+            printf(" ");
+        }
+
+        // 換行
+        printf("\n");
+    }
+
+    // 使用for迴圈來列印下半部的菱形
+    for (i = n / 2 - 1; i >= 0; i--)
+    {
+        // 列印左邊的空格
+        for (j = 0; j < n / 2 - i; j++)
+        {
+            printf(" ");
+        }
+
+        // 列印左邊的星號
+        for (j = 0; j < i + 1; j++)
+        {
+            printf("*");
+        }
+
+        // 列印右邊的星號
+        for (j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+
+        // 列印右邊的空格
+        for (j = 0; j < n / 2 - i; j++)
+        {
+            printf(" ");
+        }
+
+        // 換行
+        printf("\n");
+    }
+
+    return 0;
+}
