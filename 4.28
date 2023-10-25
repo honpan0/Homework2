@@ -1,0 +1,118 @@
+#include <stdio.h>
+
+int main(void)
+{
+    // 宣告變數
+    int paycode; // 支付代碼
+    double salary; // 薪水
+    double hours; // 工作時數
+    double sales; // 銷售額
+    int items; // 產品數量
+    double wage; // 時薪或者單價
+
+    // 輸出歡迎訊息
+    printf("Welcome to the payroll system.\n");
+
+    // 使用while迴圈來處理多個員工
+    while (1)
+    {
+        // 輸出提示訊息
+        printf("Please enter the paycode of the employee (-1 to end): ");
+
+        // 輸入支付代碼
+        scanf("%d", &paycode);
+
+        // 如果支付代碼是-1，則結束迴圈
+        if (paycode == -1)
+        {
+            break;
+        }
+
+        // 使用switch來根據不同的支付代碼計算薪水
+        switch (paycode)
+        {
+        case 1: // 經理
+            // 輸出提示訊息
+            printf("Please enter the weekly salary of the manager: ");
+
+            // 輸入每週薪水
+            scanf("%lf", &salary);
+
+            // 輸出結果
+            printf("The manager's pay is $%.2f\n\n", salary);
+            break;
+
+        case 2: // 時薪工
+            // 輸出提示訊息
+            printf("Please enter the hourly wage of the worker: ");
+
+            // 輸入時薪
+            scanf("%lf", &wage);
+
+            // 輸出提示訊息
+            printf("Please enter the number of hours worked by the worker: ");
+
+            // 輸入工作時數
+            scanf("%lf", &hours);
+
+            // 判斷是否有超過40小時
+            if (hours > 40)
+            {
+                // 計算超過部分的加班費
+                salary = wage * 40 + wage * 1.5 * (hours - 40);
+            }
+            else
+            {
+                // 計算正常部分的薪水
+                salary = wage * hours;
+            }
+
+            // 輸出結果
+            printf("The worker's pay is $%.2f\n\n", salary);
+            break;
+
+        case 3: // 佣金工
+            // 輸出提示訊息
+            printf("Please enter the gross weekly sales of the worker: ");
+
+            // 輸入銷售額
+            scanf("%lf", &sales);
+
+            // 計算薪水
+            salary = 250 + sales * 0.057;
+
+            // 輸出結果
+            printf("The commission worker's pay is $%.2f\n\n", salary);
+            break;
+
+        case 4: // 計件工
+            // 輸出提示訊息
+            printf("Please enter the number of items produced by the worker: ");
+
+            // 輸入產品數量
+            scanf("%d", &items);
+
+            // 輸出提示訊息
+            printf("Please enter the wage per item of the worker: ");
+
+            // 輸入單價
+            scanf("%lf", &wage);
+
+            // 計算薪水
+            salary = items * wage;
+
+            // 輸出結果
+            printf("The pieceworker's pay is $%.2f\n\n", salary);
+            break;
+
+        default: // 非法的支付代碼
+            // 輸出錯誤訊息
+            printf("Invalid paycode.\n\n");
+        }
+    }
+
+    // 輸出結束訊息
+    printf("Thank you for using the payroll system.\n");
+
+    return 0;
+}
