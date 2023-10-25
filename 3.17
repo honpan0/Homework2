@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+float a;
+float b;
+float c;
+float d;
+float e;
+float f;
+int main()
+{
+    while(1==1){
+        printf ("Enter account number (-1 to end)： ");
+        scanf("%f",&a);
+        getchar();
+        if(a==-1)
+        break;
+        printf("Enter beginning balance：");
+        scanf ("%f",&b);
+        getchar();
+        printf ("Enter total charges：");
+        scanf ("%f",&c);
+        getchar();
+        printf ("Enter total credits：");
+        scanf("%f",&d);
+        getchar();
+        printf ("Enter credit limit：");
+        scanf ("%f",&e);
+        getchar();
+        printf ("account :%.0f\n",a);
+        printf ("credit limit=%.2f\n",e);
+        f=b+c-d;
+        printf ("balance:%.2f\n",f);
+        if (f>e)
+            printf("credit limit exceeded\n");
+
+    }
+    return 0;
+}
