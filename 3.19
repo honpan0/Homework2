@@ -25,7 +25,7 @@ int main()
     }
     else if(a==-1)
     break;
-    printf("\n");
+    printf("\n\n");
     }
 
     return 0;
