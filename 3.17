@@ -32,7 +32,7 @@ int main()
         printf ("balance:%.2f\n",f);
         if (f>e)
             printf("credit limit exceeded\n");
-
+            printf("\n");
     }
     return 0;
 }
