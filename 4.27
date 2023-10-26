@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int a;
+int b;
+double c;
+double d;
+int e;
+float f;
+int main()
+{
+    for(a=1;a<=500;a++)
+    {
+        for(b=1;b<=500;b++)
+        {
+            c=a*a+b*b;
+            d=sqrt(c);
+            e=d;
+         if(d<=500&&d==e) 
+           { printf("邊長1：%d,邊長2：%d",a,b);
+            printf("斜邊是：%d",(int)d);
+             printf("\n");
+           }
+            
+         }
+     }
+
+ }
+
